@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swapnil DevOps Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: '✔';
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .s3 {
+            color: #3498db;
+        }
+        .cloudfront {
+            color: #f39c12;
+        }
+        .acm {
+            color: #e74c3c;
+        }
+        .codepipeline {
+            color: #9b59b6;
+        }
+        .route53 {
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Swapnil DevOps Project</h1>
+    </header>
+
+    <section>
+        <h2>Project Overview</h2>
+        <ul>
+            <li class="s3">Amazon S3 is used to store our static website content, ensuring durability and scalability.</li>
+            <li class="cloudfront">CloudFront acts as our CDN to enhance website performance and reduce latency.</li>
+            <li class="acm">ACM handles SSL/TLS certificates to secure the website.</li>
+            <li class="codepipeline">CodePipeline automates our CICD pipeline for seamless deployment.</li>
+            <li class="route53">AWS Route53 ensures reliable DNS management for our domain.</li>
+        </ul>
+    </section>
+</body>
+</html>
