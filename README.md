@@ -159,6 +159,259 @@ In the following section, we will proceed to populate the S3 bucket with content
 
 
 
+![image](https://github.com/user-attachments/assets/e9e67345-a250-43d9-8e49-c2098370fafa)
+
+
+
+
+
+
+
+
+- Select "Legal access identities" as the origin access. This will allow the distribution to access the contents of the S3 bucket even though public access is blocked.
+
+- Select an origin access identity or create a new one, as shown in the second image.
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/855335ee-79d2-45ff-aabb-7dc0f01ac5e9)
+
+
+
+
+
+
+
+
+
+###############################################################################################
+
+
+- Enable Web Application Firewall (WAF) security protections to secure the application from threats and vulnerabilities by stopping requests before they can reach your application.
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/a8ce88c2-2c8f-4e8d-b4f9-4b7eebd2f959)
+
+
+
+
+
+
+
+###################################################################################################
+
+
+
+
+
+
+- Select "redirect HTTP to HTTPS" and choose the HTTP methods.
+
+
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/a23bf2e6-ffc9-4710-a994-b1a07499fe9e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################################################################################################
+
+
+
+
+
+
+
+- Use all edge locations to allow the best performance. Also, add an alternate domain name. Then associate a custom SSL certificate with the distribution. If no certificate is available, you can request a new certificate from the AWS Certificate Manager.
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/d817427a-f103-4ef4-9ba8-61f2142b2723)
+
+
+
+
+
+
+
+##################################################################################################
+
+
+
+
+
+
+
+
+- Specify the file name to return when a user requests the root URL (/). In this case, the index.html file was used. Leave the remaining configuration as default and create the distribution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/6fdd7c69-257c-48b7-831d-0cd5095373f6)
+
+
+
+
+
+
+
+
+
+
+
+############################################################################################################################################
+
+
+
+
+
+
+
+
+- Once the CloudFront distribution has been successfully created, note down the CloudFront distribution domain name as that will be the URL to access the application.
+
+- Copy the distribution domain name and paste it in a new tab in a web browser. This takes us to the website, as shown in the image below, and as we can see, the connection is secured due to the SSL certificate, allowing only HTTPS requests.
+
+
+
+
+
+
+
+
+# Configure Custom Domain through AWS Route53:
+
+- To configure a custom domain, navigate to the Route53 service in the AWS Management Console.
+
+- Click on "Create record" to create a new record.
+
+
+
+- Enter the record name
+
+
+💡Make sure it aligns with the alternate domain name that was used during the configuration of the CloudFront distribution.
+
+
+
+- Select the "A" record type
+
+- Enable "Alias" and select CloudFront distribution as the alias to route traffic to.
+
+- Then select the CloudFront distribution you have created earlier, and go ahead to create the new record.
+
+
+
+
+
+
+
+![route53](https://github.com/user-attachments/assets/6a852680-fc1d-4ce5-a080-f47bb4d328a4)
+
+
+
+
+
+
+
+
+
+
+
+
+################################################################################################################
+
+
+
+
+
+
+
+
+
+
+# Once the record has been created, the domain name specified can now be used to access the website.
+
+
+
+
+
+
+
+![static-website-aws](https://github.com/user-attachments/assets/93e9292f-9e10-40dd-8837-7f4809e42524)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################################################################
+
+
+
+
+# Conclusion:
+
+- Throughout this project, we explored the step-by-step process of setting up a static website on AWS S3, configuring a CI/CD pipeline using AWS CodePipeline, and enhancing performance with a Content Delivery Network (CDN) using Amazon CloudFront. We also learned how to configure a custom domain using Route53, allowing users to access the website with a personalized URL.
+
+- By following these steps, you can create a robust and scalable infrastructure for hosting your static website.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
